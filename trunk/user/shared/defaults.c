@@ -855,6 +855,7 @@ struct nvram_pair router_defaults[] = {
 	/*easytier*/
 	{ "easytier_enable", "0" },
 	{ "easytier_config_server", "" },
+	{ "easytier_hostname", "" },
 	{ "easytier_bin", "/tmp/var/easytier-core" },
 	{ "easytier_log", "0" },
 	{ "easytier_ports", "11010" },
@@ -865,8 +866,11 @@ struct nvram_pair router_defaults[] = {
 	{ "easytier_web_protocol", "" },
 	{ "easytier_web_api", "11211" },
 	{ "easytier_web_log", "2" },
-	{ "easytier_html_port", "11210" },
+	{ "easytier_html_port", "11211" },
 	{ "easytier_web_bin", "/tmp/var/easytier-web" },
+	{ "easytier_api_host", "" },
+	{ "easytier_uuid", "" },
+	{ "easytier_geoip", "" },
 #endif
 
 #if defined(APP_BAFA)
@@ -886,6 +890,7 @@ struct nvram_pair router_defaults[] = {
 	{ "virtualhere_enable", "0" },
 	{ "virtualhere_wan", "0" },
 	{ "virtualhere_v6", "0" },
+	{ "virtualhere_pass", "" },
 	{ "virtualhere_bin", "/etc/storage/bin/virtualhere" },
 #endif
 

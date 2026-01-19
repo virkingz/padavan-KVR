@@ -1003,7 +1003,7 @@
 			{"vnts_web_user", "", NULL, EVM_RESTART_VNTS},
 			{"vnts_web_pass", "", NULL, EVM_RESTART_VNTS},
 			{"vnts_web_wan", "", NULL, EVM_RESTART_VNTS},
-			{"vnts_vnts_bin", "", NULL, EVM_RESTART_VNTS},
+			{"vnts_bin", "", NULL, EVM_RESTART_VNTS},
 			{"vnts_log", "", NULL, EVM_RESTART_VNTS},
 			{"vnts.log", "File", NULL, EVM_RESTART_VNTS},
 			{0,0,0,0}
@@ -1467,6 +1467,7 @@
 	struct variable variables_EASYTIER[] = {
 			{"easytier_enable", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_config_server", "", NULL, EVM_RESTART_EASYTIER},
+			{"easytier_hostname", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_bin", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_log", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_bin", "", NULL, EVM_RESTART_EASYTIER},
@@ -1479,7 +1480,10 @@
 			{"easytier_web_api", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_web_log", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_html_port", "", NULL, EVM_RESTART_EASYTIER},
+			{"easytier_api_host", "", NULL, EVM_RESTART_EASYTIER},
 			{"easytier_web_bin", "", NULL, EVM_RESTART_EASYTIER},
+			{"easytier_uuid", "", NULL, EVM_RESTART_EASYTIER},
+			{"easytier_geoip", "", NULL, EVM_RESTART_EASYTIER},
 			{"scripts.easytier.toml", "File", NULL, EVM_RESTART_EASYTIER},
 			{0,0,0,0}
 	};
@@ -1505,6 +1509,7 @@
 			{"virtualhere_enable", "", NULL, EVM_RESTART_VIRTUALHERE},
 			{"virtualhere_wan", "", NULL, EVM_RESTART_VIRTUALHERE},
 			{"virtualhere_v6", "", NULL, EVM_RESTART_VIRTUALHERE},
+			{"virtualhere_pass", "", NULL, EVM_RESTART_VIRTUALHERE},
 			{"virtualhere_bin", "", NULL, EVM_RESTART_VIRTUALHERE},
 			{"scripts.virtualhere.ini", "File", NULL, EVM_RESTART_VIRTUALHERE},
 			{0,0,0,0}

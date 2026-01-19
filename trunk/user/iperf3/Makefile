@@ -43,7 +43,6 @@ clean:
 
 romfs:
 	$(STRIP) $(THISDIR)/$(SRC_NAME)/src/iperf3
-	upx --lzma --best $(THISDIR)/$(SRC_NAME)/src/iperf3
 	$(ROMFSINST) -p +x $(THISDIR)/$(SRC_NAME)/src/iperf3 /usr/bin/iperf3
 	cp -fP $(CONFIG_CROSS_COMPILER_ROOT)/mipsel-linux-uclibc/sysroot/lib/libatomic.so* $(ROMFSDIR)/lib
 

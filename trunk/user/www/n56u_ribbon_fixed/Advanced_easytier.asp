@@ -120,6 +120,8 @@ function change_easytier_enable(mflag){
 	var is_config_server = (m == "1") ? 1 : 0;
 	showhide_div("config_server_tr", is_config_server);
 	showhide_div("config_server_td", is_config_server);
+	showhide_div("hostname_tr", is_config_server);
+	showhide_div("hostname_td", is_config_server);
 
 }
 
@@ -383,6 +385,12 @@ function button_etweb(){
 	<input class="btn btn-success" style="width:150px" type="button" value="官方Web控制台" onclick="window.open('https://easytier.cn/web', '_blank')" />
 	</td>
 	</tr><tr id="config_server_td"><td colspan="3"></td></tr>
+	<tr id="hostname_tr">
+	<th width="30%" style="border-top: 0 none;" title="--hostname  指定主机名，用于在web控制台识别设备的名称">主机名</th>
+	<td style="border-top: 0 none;">
+	<input name="easytier_hostname" type="text" class="input" id="easytier_hostname" placeholder="<% nvram_get_x("","computer_name"); %>" onkeypress="return is_string(this,event);" value="<% nvram_get_x("","easytier_hostname"); %>" size="32" maxlength="35" /></td>
+	</td>
+	</tr><tr id="hostname_td"><td colspan="3"></td></tr>
 	<tr>
 	<th style="border: 0 none;">程序路径</th>
 	<td style="border: 0 none;">
@@ -489,7 +497,19 @@ function button_etweb(){
 	<input name="easytier_html_port" type="text" class="input" id="easytier_html_port" placeholder="11210" onkeypress="return is_string(this,event);" value="<% nvram_get_x("","easytier_html_port"); %>" size="32" maxlength="55" />
 	&nbsp;<input class="btn btn-success" style="" type="button" value="打开WEB控制台" onclick="button_etweb()" />
 	</td>
-	</tr><td colspan="3"></td>	
+	</tr><td colspan="3"></td>
+	<tr>
+	<th style="border: 0 none;" title="--api-host  API 服务器的 URL，用于 web 前端连接">API服务器URL</th>
+	<td style="border: 0 none;">
+	<textarea maxlength="1024" class="input" name="easytier_api_host" id="easytier_api_host" placeholder="https://config-server.easytier.cn" style="width: 210px; height: 20px; resize: both; overflow: auto;"><% nvram_get_x("","easytier_api_host"); %></textarea>
+	</div>
+	</tr><td colspan="3"></td>
+	<tr> 
+	<th style="border: 0 none;" title="--geoip-db  数据库文件路径，用于查找客户端的位置，默认为嵌入文件（仅国家信息），推荐https://github.com/P3TERX/GeoLite.mmdb">IP数据库</th>
+	<td style="border: 0 none;">
+	<textarea maxlength="1024" class="input" name="easytier_geoip" id="easytier_geoip" placeholder="/etc/storage/easytier/GeoLite.mmdb" style="width: 210px; height: 20px; resize: both; overflow: auto;"><% nvram_get_x("","easytier_geoip"); %></textarea>
+	</div>
+	</tr><td colspan="3"></td>
 	<tr> 
 	<th width="30%" style="border-top: 0 none;" title="--console-log-level  控制台日志级别">日志等级</th>
 	<td style="border-top: 0 none;">
@@ -603,4 +623,5 @@ function button_etweb(){
 </body>
 
 </html>
+
 
